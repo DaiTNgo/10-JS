@@ -1,0 +1,65 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+::selection {
+  color: blue;
+  background-color: rgba(255, 0, 0, 0.233);
+}
+
+body {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background-image: linear-gradient(45deg, red, blue);
+}
+
+.container-quiz {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 400px;
+  height: 400px;
+  background-color: white;
+  box-shadow: 0 0 10px 0 black;
+  padding: 20px;
+}
+
+button {
+  width: max-content;
+  margin: 0 auto;
+  padding: 10px 20px;
+  border: none;
+  font-weight: 600;
+  font-size: 24px;
+  background-image: linear-gradient(to right, red, blue);
+  color: transparent;
+  background-clip: text;
+  border-radius: 10px;
+  cursor: pointer;
+}
+button:hover {
+  background-image: linear-gradient(to left, red, blue);
+}
+
+/*# sourceMappingURL=style.css.map */
