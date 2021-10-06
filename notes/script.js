@@ -49,3 +49,17 @@ window.onload = () => {
 		localStorage.setItem('notes', JSON.stringify(notes));
 	}
 };
+
+/**
+ * khi render nhiều component giống nhau
+ * ta cần get element trên mỗi lần render đó
+ * nếu không thì sau khi render xong mới get thì
+ * mình sẽ nhận hết của toàn bộ document
+ * vì vậy render cái nào muốn có sự kiện trên đó thì làm cùng lúc như ở trên
+ *
+ * ta tạo ra <div class="note"></div> = note
+ * để chúng ta có thể get note.querySelector
+ * để có thế lấy các element cần xử lý sự kiện
+ * lần render component sau không lặp lại lần trước vì mỗi component được lấy riêng
+ * trước khi render ra document
+ */
