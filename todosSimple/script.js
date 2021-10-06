@@ -4,9 +4,12 @@ window.onload = () => {
 	const input = $('#task');
 	const form = $('form');
 	const ul = $('#todoList');
-	[...JSON.parse(localStorage.getItem('todoList'))].forEach((liText) => {
+	[...(JSON.parse(localStorage.getItem('todoList')) || [])].forEach((todo) => {
 		const text = document.createElement('li');
-		text.innerText = liText;
+		text.innerText = todo.todoText;
+		if (todo.status) {
+			text.classList.add('completed');
+		}
 		ul.append(text);
 		text.onclick = () => {
 			text.classList.toggle('completed');
@@ -27,6 +30,7 @@ window.onload = () => {
 
 		text.onclick = () => {
 			text.classList.toggle('completed');
+			updateLs();
 		};
 		text.addEventListener('contextmenu', (e) => {
 			e.preventDefault();
@@ -40,9 +44,14 @@ window.onload = () => {
 	function updateLs() {
 		const li = $$('li');
 		let arrLi = [];
-		// arrLi = [...JSON.parse(arrLi)];  localStorage.getItem('todoList') ||
 		[...li].forEach((li) => {
-			arrLi = [...arrLi, li.innerText];
+			arrLi = [
+				...arrLi,
+				{
+					todoText: li.innerText,
+					status: li.classList.contains('completed'),
+				},
+			];
 		});
 		localStorage.setItem('todoList', JSON.stringify(arrLi));
 	}
