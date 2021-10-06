@@ -49,12 +49,13 @@ window.onload = () => {
 		});
 	}
 	function setMealIdLs(mealId) {
-		arrMeal.push(mealId);
-		localStorage.setItem('mealIds', JSON.stringify(arrMeal));
+		localStorage.setItem('mealIds', JSON.stringify([...arrMeal, mealId]));
 	}
 	function removeMealIdLs(mealId) {
 		const index = arrMeal.indexOf(mealId);
 		arrMeal.splice(index, 1);
+		localStorage.setItem('mealIds', JSON.stringify(arrMeal));
+		console.log(arrMeal);
 	}
 
 	function getMealLs() {
