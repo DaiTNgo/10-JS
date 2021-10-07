@@ -1,0 +1,94 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: 350px;
+  object-fit: cover;
+  object-position: center;
+  flex: 0 0 auto;
+}
+
+body {
+  background-color: #22254b;
+}
+
+header {
+  height: 70px;
+  line-height: 70px;
+  background-color: #373b69;
+  margin-bottom: 2rem;
+}
+header .wrapper {
+  max-width: 1250px;
+  margin: 0 auto;
+}
+header input {
+  border: 0;
+  border-radius: 100rem;
+  font-size: 20px;
+  padding: 5px 10px;
+}
+
+main {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+  max-width: 1250px;
+  margin: 10px auto;
+}
+main .movie {
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #373b69;
+  display: flex;
+  flex-direction: column;
+}
+main .movie-info {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  color: transparent;
+  background-image: linear-gradient(45deg, red, blue);
+  background-clip: text;
+  padding: 10px 5px;
+}
+main .movie-info .movie-rate {
+  flex: 0 0 auto;
+  width: 35px;
+  height: 35px;
+  text-align: center;
+  line-height: 35px;
+  color: black;
+  border-radius: 5px;
+  background-color: #22254b;
+  font-weight: 600;
+}
+main .movie-info .movie-rate.red {
+  color: red;
+}
+main .movie-info .movie-rate.orange {
+  color: orange;
+}
+main .movie-info .movie-rate.green {
+  color: green;
+}
+
+/*# sourceMappingURL=style.css.map */
