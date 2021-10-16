@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const $$ = document.querySelectorAll.bind(document);
 const $ = document.querySelector.bind(document);
 const APIURL = 'https://api.github.com/users/';
@@ -64,3 +65,6 @@ function addReposToCard(respData) {
 			repos.insertAdjacentHTML('beforeend', rep);
 		});
 }
+=======
+
+>>>>>>> ef96b20ec60d2b0870534e1a530edfb8e95e37ec
