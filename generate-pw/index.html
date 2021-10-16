@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="style.css" />
+		<title>Generate Password</title>
+	</head>
+	<body>
+		<div class="app">
+			<div class="app-header">
+				<div class="password" id="password">fasdfasd</div>
+				<div class="pw-copy" id="pw-copy">Copy</div>
+			</div>
+			<div class="app-body">
+				<form class="form-control">
+					<label for="length">Password Length</label>
+					<input require="require" type="number" id="length" min="2" max="30" />
+				</form>
+				<form class="form-control">
+					<label for="symbol">Contains Symbol</label>
+					<input require type="checkbox" name="symbol" id="symbol" />
+				</form>
+				<form class="form-control">
+					<label for="uppercase">Contains Uppercase letters</label>
+					<input require type="checkbox" name="" id="uppercase" />
+				</form>
+				<form class="form-control">
+					<label for="lowercase">Contains Lowercase letters</label>
+					<input require type="checkbox" name="" id="lowercase" />
+				</form>
+				<form class="form-control">
+					<label for="number">Contains Number characters</label>
+					<input require type="checkbox" name="" id="number" />
+				</form>
+			</div>
+			<div class="generate-pw">Generate Password</div>
+		</div>
+		<script src="script.js"></script>
+	</body>
+</html>

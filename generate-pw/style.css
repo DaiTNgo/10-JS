@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-family: "Poppins", sans-serif;
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+body {
+  display: grid;
+  place-content: center;
+  min-height: 100vh;
+  background-color: #530053;
+  font-size: 1.8rem;
+  line-height: 1.5;
+  color: #fff;
+}
+
+.app {
+  padding: 1rem;
+  background-color: violet;
+  border-radius: 1rem;
+}
+.app-header {
+  position: relative;
+  background-color: #4e024e;
+  color: white;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin-bottom: 2rem;
+  width: 40rem;
+}
+.app-header .pw-copy {
+  position: absolute;
+  bottom: -1rem;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  background-color: violet;
+  border-radius: 0.5rem;
+  padding: 0.2rem;
+  border: 0.2rem solid white;
+  cursor: pointer;
+  user-select: none;
+}
+.app-body .form-control {
+  margin: 1rem 0;
+  display: flex;
+  justify-content: space-between;
+}
+.app-body .form-control input[type=number] {
+  width: 10rem;
+}
+.app .generate-pw {
+  padding: 2rem;
+  background-color: #f0c03c;
+  border-radius: 1rem;
+  color: violet;
+  font-weight: 600;
+  font-size: 3.2rem;
+  user-select: none;
+}
+
+/*# sourceMappingURL=style.css.map */
